@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrAlien | Dual-Stake Equity DAO</title>
+
+    <link rel="stylesheet" href="dralien-app.css">
+</head>
+
+<body>
+    <div class="cosmic-bg"></div>
+    <div class="stars"></div>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">DrAlien</div>
+
+            <nav>
+                <div class="nav-section">
+                    <div class="nav-label">Main</div>
+                    <div class="nav-item active" data-page="dashboard">
+                        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                            </path>
+                        </svg>
+                        <span>Dashboard</span>
+                    </div>
+                    <div class="nav-item" data-page="staking">
+                        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                            </path>
+                        </svg>
+                        <span>Staking</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-label">Equity</div>
+                    <div class="nav-item" data-page="wallet">
+                        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                            </path>
+                        </svg>
+                        <span>Wallet</span>
+                    </div>
+                    <div class="nav-item" data-page="opportunities">
+                        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <span>Opportunities</span>
+                        <span class="nav-badge">3</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-label">Governance</div>
+                    <div class="nav-item" data-page="voting">
+                        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4">
+                            </path>
+                        </svg>
+                        <span>Voting</span>
+                        <span class="nav-badge">5</span>
+                    </div>
+                    <div class="nav-item" data-page="proposals">
+                        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                            </path>
+                        </svg>
+                        <span>Proposals</span>
+                    </div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-label">Community</div>
+                    <div class="nav-item" data-page="analytics">
+                        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                            </path>
+                        </svg>
+                        <span>Analytics</span>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+        <!-- Main Content -->
+        <main class="main" id="main">
+            <!-- Dashboard Section -->
+            <section class="section active" id="dashboard">
+                <div class="section-header">
+                    <h1>Dashboard</h1>
+                    <div class="header-actions">
+                        <button class="btn btn-secondary" onclick="openNotification()">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                                </path>
+                            </svg>
+                            <span class="hidden-mobile">Alerts</span>
+                        </button>
+                        <button class="btn btn-primary" onclick="openWalletModal()">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z">
+                                </path>
+                            </svg>
+                            <span class="hidden-mobile">Connect Wallet</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="sub-nav">
+                    <div class="sub-nav-btn active" data-sub="overview">Overview</div>
+                    <div class="sub-nav-btn" data-sub="portfolio">Portfolio</div>
+                </div>
+                <div class="section-content">
+                    <div class="nav-content active" id="overview">
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <div class="stat-icon">💰</div>
+                                    <span class="stat-change positive">+12.5%</span>
+                                </div>
+                                <div class="stat-label">Total Value Locked</div>
+                                <div class="stat-value">$2.8M</div>
+                                <div class="stat-subtext">125,000 DRALIEN + 42 NFTs staked</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <div class="stat-icon">🏢</div>
+                                    <span class="stat-change positive">+3</span>
+                                </div>
+                                <div class="stat-label">Portfolio Companies</div>
+                                <div class="stat-value">8</div>
+                                <div class="stat-subtext">Total equity value: $1.5M</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <div class="stat-icon">📈</div>
+                                    <span class="stat-change positive">+24%</span>
+                                </div>
+                                <div class="stat-label">Revenue Distributed</div>
+                                <div class="stat-value">$156K</div>
+                                <div class="stat-subtext">Last quarter earnings</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <div class="stat-icon">🗳️</div>
+                                    <span class="stat-change positive">68%</span>
+                                </div>
+                                <div class="stat-label">Your Voting Power</div>
+                                <div class="stat-value">2.5%</div>
+                                <div class="stat-subtext">Based on token + NFT stake</div>
+                            </div>
+                        </div>
+                        <div class="grid grid-2">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2 class="card-title">Recent Acquisitions</h2>
+                                    <button class="btn btn-outline">View All</button>
+                                </div>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Company</th>
+                                                <th>Equity</th>
+                                                <th>Investment</th>
+                                                <th>ROI</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-label="Company"><strong>BlockChain Dynamics</strong></td>
+                                                <td data-label="Equity">7%</td>
+                                                <td data-label="Investment">$180K</td>
+                                                <td data-label="ROI"><span class="text-success">+36%</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Company"><strong>CryptoMedia Inc</strong></td>
+                                                <td data-label="Equity">5%</td>
+                                                <td data-label="Investment">$120K</td>
+                                                <td data-label="ROI"><span class="text-success">+15%</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Company"><strong>DeFi Analytics</strong></td>
+                                                <td data-label="Equity">10%</td>
+                                                <td data-label="Investment">$200K</td>
+                                                <td data-label="ROI"><span class="text-danger">-5%</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Company"><strong>Web3 Gaming Studio</strong></td>
+                                                <td data-label="Equity">8%</td>
+                                                <td data-label="Investment">$150K</td>
+                                                <td data-label="ROI"><span class="text-success">+28%</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2 class="card-title">Active Votes</h2>
+                                    <span class="badge badge-active">5 Live</span>
+                                </div>
+
+                                <div class="vote-card">
+                                    <div class="vote-header">
+                                        <div>
+                                            <div class="vote-title">TechVenture Labs Acquisition</div>
+                                            <div class="vote-description">Purchase 5% equity stake for $125K investment
+                                            </div>
+                                        </div>
+                                        <span class="badge badge-active">Live</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 78%"></div>
+                                    </div>
+                                    <div class="vote-stats">
+                                        <span class="text-success">For: 156 (78%)</span>
+                                        <span class="text-danger">Against: 45 (22%)</span>
+                                    </div>
+                                    <div class="vote-meta">
+                                        <span>⏱️ Ends in 3 days</span>
+                                        <span>👥 201 votes</span>
+                                    </div>
+                                    <div class="vote-actions">
+                                        <button class="btn-vote btn-vote-for">Vote For</button>
+                                        <button class="btn-vote btn-vote-against">Vote Against</button>
+                                    </div>
+                                </div>
+                                <div class="vote-card">
+                                    <div class="vote-header">
+                                        <div>
+                                            <div class="vote-title">Boost Staking Rewards</div>
+                                            <div class="vote-description">Increase APY from 18% to 20%</div>
+                                        </div>
+                                        <span class="badge badge-active">Live</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 72%"></div>
+                                    </div>
+                                    <div class="vote-stats">
+                                        <span class="text-success">For: 289 (72%)</span>
+                                        <span class="text-danger">Against: 112 (28%)</span>
+                                    </div>
+                                    <div class="vote-meta">
+                                        <span>⏱️ Ends in 5 days</span>
+                                        <span>👥 401 votes</span>
+                                    </div>
+                                    <div class="vote-actions">
+                                        <button class="btn-vote btn-vote-for">Vote For</button>
+                                        <button class="btn-vote btn-vote-against">Vote Against</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-content" id="portfolio">
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <div class="stat-icon">💼</div>
+                                    <span class="stat-change positive">+3</span>
+                                </div>
+                                <div class="stat-label">Total Acquisitions</div>
+                                <div class="stat-value">8</div>
+                                <div class="stat-subtext">Across 5 sectors</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <div class="stat-icon">💵</div>
+                                    <span class="stat-change positive">+18%</span>
+                                </div>
+                                <div class="stat-label">Total Invested</div>
+                                <div class="stat-value">$1.2M</div>
+                                <div class="stat-subtext">Current portfolio value</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <div class="stat-icon">📊</div>
+                                    <span class="stat-change positive">+24%</span>
+                                </div>
+                                <div class="stat-label">Portfolio Value</div>
+                                <div class="stat-value">$1.5M</div>
+                                <div class="stat-subtext">Unrealized gains: $300K</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-header">
+                                    <div class="stat-icon">💰</div>
+                                    <span class="stat-change positive">+15%</span>
+                                </div>
+                                <div class="stat-label">Revenue Generated</div>
+                                <div class="stat-value">$156K</div>
+                                <div class="stat-subtext">Distributed to stakers</div>
+                            </div>
+                        </div>
+                        <div class="tabs">
+                            <div class="tab active" data-target="all-holdings">All Holdings</div>
+                            <div class="tab" data-target="top-performers">Top Performers</div>
+                            <div class="tab" data-target="revenue-breakdown">Revenue Breakdown</div>
+                        </div>
+                        <div class="tab-contents">
+                            <div class="tab-content active" id="all-holdings">
+                                <div class="card">
+                                    <div class="table-container">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Company</th>
+                                                    <th>Sector</th>
+                                                    <th>Equity</th>
+                                                    <th>Investment</th>
+                                                    <th>Current Value</th>
+                                                    <th>Revenue Share (Q4)</th>
+                                                    <th>Performance</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="Company"><strong>BlockChain Dynamics</strong></td>
+                                                    <td data-label="Sector">Technology</td>
+                                                    <td data-label="Equity">7%</td>
+                                                    <td data-label="Investment">$180K</td>
+                                                    <td data-label="Current Value">$245K</td>
+                                                    <td data-label="Revenue Share (Q4)">$18,500</td>
+                                                    <td data-label="Performance"><span class="text-success">+36%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Company"><strong>CryptoMedia Inc</strong></td>
+                                                    <td data-label="Sector">Media</td>
+                                                    <td data-label="Equity">5%</td>
+                                                    <td data-label="Investment">$120K</td>
+                                                    <td data-label="Current Value">$138K</td>
+                                                    <td data-label="Revenue Share (Q4)">$12,200</td>
+                                                    <td data-label="Performance"><span class="text-success">+15%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Company"><strong>DeFi Analytics</strong></td>
+                                                    <td data-label="Sector">DeFi</td>
+                                                    <td data-label="Equity">10%</td>
+                                                    <td data-label="Investment">$200K</td>
+                                                    <td data-label="Current Value">$190K</td>
+                                                    <td data-label="Revenue Share (Q4)">$8,900</td>
+                                                    <td data-label="Performance"><span class="text-danger">-5%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Company"><strong>Web3 Gaming Studio</strong></td>
+                                                    <td data-label="Sector">Gaming</td>
+                                                    <td data-label="Equity">8%</td>
+                                                    <td data-label="Investment">$150K</td>
+                                                    <td data-label="Current Value">$192K</td>
+                                                    <td data-label="Revenue Share (Q4)">$15,600</td>
+                                                    <td data-label="Performance"><span class="text-success">+28%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Company"><strong>NFT Marketplace Pro</strong></td>
+                                                    <td data-label="Sector">NFT</td>
+                                                    <td data-label="Equity">6%</td>
+                                                    <td data-label="Investment">$140K</td>
+                                                    <td data-label="Current Value">$168K</td>
+                                                    <td data-label="Revenue Share (Q4)">$11,200</td>
+                                                    <td data-label="Performance"><span class="text-success">+20%</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="top-performers">
+                                <div class="card">
+                                    <div class="chart-placeholder">
+                                        <p>Top-performer chart (e.g., bar chart showing ROI per company)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="revenue-breakdown">
+                                <div class="card">
+                                    <div class="chart-placeholder">
+                                        <p>Revenue breakdown chart (e.g., pie chart by sector)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Staking Section -->
+            <section class="section" id="staking">
+                <div class="section-header">
+                    <h1>Staking</h1>
+                    <div class="header-actions">
+                        <button class="btn btn-secondary" onclick="openNotification()">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                                </path>
+                            </svg>
+                            <span class="hidden-mobile">Alerts</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="sub-nav">
+                    <div class="sub-nav-btn active" data-sub="staking-overview">Overview</div>
+                    <div class="sub-nav-btn" data-sub="stake">Stake</div>
+                    <div class="sub-nav-btn" data-sub="history">History</div>
+                </div>
+                <div class="section-content">
+                    <div class="nav-content active" id="staking-overview">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-title">My Stakes & Revenue</h2>
+                                <button class="btn btn-outline">Manage Stakes</button>
+                            </div>
+                            <div class="my-stakes-grid">
+                                <div class="stat-card">
+                                    <div class="stat-header">
+                                        <div class="stat-icon">💎</div>
+                                    </div>
+                                    <div class="stat-label">Staked Tokens</div>
+                                    <div class="stat-value">125,000 DRALIEN</div>
+                                    <div class="stat-subtext">Earning 20% APY</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-header">
+                                        <div class="stat-icon">🎨</div>
+                                    </div>
+                                    <div class="stat-label">Staked NFTs</div>
+                                    <div class="stat-value">42</div>
+                                    <div class="stat-subtext">Boosting voting power</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-header">
+                                        <div class="stat-icon">💰</div>
+                                        <span class="stat-change positive">+15%</span>
+                                    </div>
+                                    <div class="stat-label">Pending Revenue Share</div>
+                                    <div class="stat-value">$4,560</div>
+                                    <div class="stat-subtext">From ecosystem investments</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-header">
+                                        <div class="stat-icon">📊</div>
+                                    </div>
+                                    <div class="stat-label">Your Share</div>
+                                    <div class="stat-value">1.8%</div>
+                                    <div class="stat-subtext">Of total DAO revenue</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-content" id="stake">
+                        <div class="stake-toggle">
+                            <button class="stake-toggle-btn active" data-type="token">Token Staking</button>
+                            <button class="stake-toggle-btn" data-type="nft">NFT Staking</button>
+                        </div>
+                        <div id="token-stake-panel" class="active">
+                            <div class="grid grid-3">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div>
+                                            <div
+                                                style="color: var(--text-secondary); font-size: 14px; margin-bottom: 4px;">
+                                                Main Pool</div>
+                                            <div style="font-size: 28px; font-weight: 800;">50,000</div>
+                                            <div style="color: var(--text-muted); font-size: 13px;">DRALIEN</div>
+                                        </div>
+                                        <span class="badge badge-active">Active</span>
+                                    </div>
+                                    <div
+                                        style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0;">
+                                        <div style="text-align: center;">
+                                            <div style="color: var(--text-muted); font-size: 12px;">APY</div>
+                                            <div
+                                                style="font-size: 20px; font-weight: 700; color: var(--accent-primary);">
+                                                18%</div>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <div style="color: var(--text-muted); font-size: 12px;">Earned</div>
+                                            <div style="font-size: 20px; font-weight: 700;">$3,450</div>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <div style="color: var(--text-muted); font-size: 12px;">Lock</div>
+                                            <div style="font-size: 20px; font-weight: 700;">45d</div>
+                                        </div>
+                                    </div>
+                                    <div class="staking-controls">
+                                        <button class="staking-btn" onclick="setAmount('min')">Min</button>
+                                        <button class="staking-btn" onclick="setAmount('half')">Half</button>
+                                        <button class="staking-btn" onclick="setAmount('max')">Max</button>
+                                    </div>
+                                    <input type="number" class="form-input" placeholder="Amount to stake"
+                                        data-label="token-amount-input">
+                                    <div class="staking-actions">
+                                        <button class="btn btn-primary">Stake</button>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div>
+                                            <div
+                                                style="color: var(--text-secondary); font-size: 14px; margin-bottom: 4px;">
+                                                Revenue Pool</div>
+                                            <div style="font-size: 28px; font-weight: 800;">75,000</div>
+                                            <div style="color: var(--text-muted); font-size: 13px;">DRALIEN</div>
+                                        </div>
+                                        <span class="badge badge-active">Active</span>
+                                    </div>
+                                    <div
+                                        style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0;">
+                                        <div style="text-align: center;">
+                                            <div style="color: var(--text-muted); font-size: 12px;">APY</div>
+                                            <div
+                                                style="font-size: 20px; font-weight: 700; color: var(--accent-primary);">
+                                                22%</div>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <div style="color: var(--text-muted); font-size: 12px;">Earned</div>
+                                            <div style="font-size: 20px; font-weight: 700;">$5,000</div>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <div style="color: var(--text-muted); font-size: 12px;">Lock</div>
+                                            <div style="font-size: 20px; font-weight: 700;">60d</div>
+                                        </div>
+                                    </div>
+                                    <div class="staking-controls">
+                                        <button class="staking-btn" onclick="setAmount('min')">Min</button>
+                                        <button class="staking-btn" onclick="setAmount('half')">Half</button>
+                                        <button class="staking-btn" onclick="setAmount('max')">Max</button>
+                                    </div>
+                                    <input type="number" class="form-input" placeholder="Amount to stake"
+                                        data-label="token-amount-input">
+                                    <div class="staking-actions">
+                                        <button class="btn btn-primary">Stake</button>
+                                    </div>
+                                </div>
+                                <div class="card"
+                                    style="background: linear-gradient(135deg, rgba(16,185,129,0.1), rgba(6,182,212,0.1)); border-color: rgba(16,185,129,0.3);">
+                                    <div class="card-header">
+                                        <div>
+                                            <div
+                                                style="color: var(--accent-primary); font-size: 14px; margin-bottom: 4px; font-weight: 700;">
+                                                Premium Pool</div>
+                                            <div
+                                                style="font-size: 28px; font-weight: 800; color: var(--accent-primary);">
+                                                25%</div>
+                                            <div style="color: var(--text-muted); font-size: 13px;">APY</div>
+                                        </div>
+                                        <span class="badge badge-active">Open</span>
+                                    </div>
+                                    <div style="margin: 20px 0; color: var(--text-secondary); font-size: 14px;">
+                                        <p style="margin-bottom: 12px;">Exclusive high-yield staking with direct revenue
+                                            sharing from all
+                                            equity investments.</p>
+                                        <ul style="padding-left: 20px; line-height: 1.8;">
+                                            <li>Min: 10,000 DRALIEN</li>
+                                            <li>Lock: 90 days</li>
+                                            <li>Bonus revenue rights</li>
+                                        </ul>
+                                    </div>
+                                    <div class="staking-controls">
+                                        <button class="staking-btn" onclick="setAmount('min')">Min</button>
+                                        <button class="staking-btn" onclick="setAmount('half')">Half</button>
+                                        <button class="staking-btn" onclick="setAmount('max')">Max</button>
+                                    </div>
+                                    <input type="number" class="form-input" placeholder="Amount to stake"
+                                        data-label="token-amount-input">
+                                    <div class="staking-actions">
+                                        <button class="btn btn-primary">Stake</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="nft-stake-panel">
+                            <div class="grid grid-3">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div>
+                                            <div
+                                                style="color: var(--text-secondary); font-size: 14px; margin-bottom: 4px;">
+                                                NFT Pool</div>
+                                            <div style="font-size: 28px; font-weight: 800;">42 NFTs</div>
+                                            <div style="color: var(--text-muted); font-size: 13px;">Staked</div>
+                                        </div>
+                                        <span class="badge badge-active">Active</span>
+                                    </div>
+                                    <div
+                                        style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0;">
+                                        <div style="text-align: center;">
+                                            <div style="color: var(--text-muted); font-size: 12px;">Boost</div>
+                                            <div
+                                                style="font-size: 20px; font-weight: 700; color: var(--accent-primary);">
+                                                2x Voting</div>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <div style="color: var(--text-muted); font-size: 12px;">Earned</div>
+                                            <div style="font-size: 20px; font-weight: 700;">$1,200</div>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <div style="color: var(--text-muted); font-size: 12px;">Lock</div>
+                                            <div style="font-size: 20px; font-weight: 700;">30d</div>
+                                        </div>
+                                    </div>
+                                    <div class="staking-controls">
+                                        <button class="staking-btn" onclick="adjustNft(-1)">-</button>
+                                        <input type="number" class="form-input" placeholder="Number of NFTs"
+                                            style="flex: 2;" data-label="nft-amount-input">
+                                        <button class="staking-btn" onclick="adjustNft(1)">+</button>
+                                    </div>
+                                    <button class="btn btn-outline w-100" onclick="openModal('nftGalleryModal')">Select
+                                        from
+                                        Gallery</button>
+                                    <div class="staking-actions">
+                                        <button class="btn btn-primary">Stake</button>
+                                    </div>
+                                </div>
+                                <div class="card"
+                                    style="background: linear-gradient(135deg, rgba(16,185,129,0.1), rgba(6,182,212,0.1)); border-color: rgba(16,185,129,0.3);">
+                                    <div class="card-header">
+                                        <div>
+                                            <div
+                                                style="color: var(--accent-primary); font-size: 14px; margin-bottom: 4px; font-weight: 700;">
+                                                Premium NFT Pool</div>
+                                            <div
+                                                style="font-size: 28px; font-weight: 800; color: var(--accent-primary);">
+                                                Exclusive</div>
+                                            <div style="color: var(--text-muted); font-size: 13px;">Benefits</div>
+                                        </div>
+                                        <span class="badge badge-active">Open</span>
+                                    </div>
+                                    <div style="margin: 20px 0; color: var(--text-secondary); font-size: 14px;">
+                                        <p style="margin-bottom: 12px;">Stake rare NFTs for enhanced revenue share and
+                                            governance rights.
+                                        </p>
+                                        <ul style="padding-left: 20px; line-height: 1.8;">
+                                            <li>Min: 5 NFTs</li>
+                                            <li>Lock: 60 days</li>
+                                            <li>Bonus: 3x voting power</li>
+                                        </ul>
+                                    </div>
+                                    <div class="staking-controls">
+                                        <button class="staking-btn" onclick="adjustNft(-1)">-</button>
+                                        <input type="number" class="form-input" placeholder="Number of NFTs"
+                                            style="flex: 2;" data-label="nft-amount-input">
+                                        <button class="staking-btn" onclick="adjustNft(1)">+</button>
+                                    </div>
+                                    <button class="btn btn-outline w-100" onclick="openModal('nftGalleryModal')">Select
+                                        from
+                                        Gallery</button>
+                                    <div class="staking-actions">
+                                        <button class="btn btn-primary">Stake</button>
+                                        <button class="btn btn-outline">Unstake</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-content" id="history">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-title">Staking History</h2>
+                                <button class="btn btn-outline">Export CSV</button>
+                            </div>
+                            <div class="history-filters">
+                                <button class="history-filter-btn active" data-filter="all">All</button>
+                                <button class="history-filter-btn" data-filter="token">Token</button>
+                                <button class="history-filter-btn" data-filter="nft">NFT</button>
+                                <button class="history-filter-btn" data-filter="stake">Stake</button>
+                                <button class="history-filter-btn" data-filter="unstake">Unstake</button>
+                                <button class="history-filter-btn" data-filter="claim">Claim</button>
+                            </div>
+                            <div class="history-list">
+                                <div class="history-card">
+                                    <div class="history-card-header">
+                                        <div class="history-card-date">Oct 15, 2025</div>
+                                        <span class="history-card-status active">Active</span>
+                                    </div>
+                                    <div class="history-card-details">
+                                        <div class="history-card-detail"><strong>Pool:</strong> Revenue Share</div>
+                                        <div class="history-card-detail"><strong>Amount:</strong> 75,000 DRALIEN</div>
+                                        <div class="history-card-detail"><strong>Action:</strong> Staked</div>
+                                        <div class="history-card-detail"><strong>Transaction ID:</strong> 0x123...abc
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history-card">
+                                    <div class="history-card-header">
+                                        <div class="history-card-date">Oct 1, 2025</div>
+                                        <span class="history-card-status active">Active</span>
+                                    </div>
+                                    <div class="history-card-details">
+                                        <div class="history-card-detail"><strong>Pool:</strong> Main Pool</div>
+                                        <div class="history-card-detail"><strong>Amount:</strong> 50,000 DRALIEN</div>
+                                        <div class="history-card-detail"><strong>Action:</strong> Staked</div>
+                                        <div class="history-card-detail"><strong>Transaction ID:</strong> 0x456...def
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history-card">
+                                    <div class="history-card-header">
+                                        <div class="history-card-date">Sep 20, 2025</div>
+                                        <span class="history-card-status completed">Completed</span>
+                                    </div>
+                                    <div class="history-card-details">
+                                        <div class="history-card-detail"><strong>Pool:</strong> Standard</div>
+                                        <div class="history-card-detail"><strong>Amount:</strong> 25,000 DRALIEN</div>
+                                        <div class="history-card-detail"><strong>Action:</strong> Claimed</div>
+                                        <div class="history-card-detail"><strong>Transaction ID:</strong> 0x789...ghi
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Wallet Section -->
+            <section class="section" id="wallet">
+                <div class="section-header">
+                    <h1>Wallet</h1>
+                    <div class="header-actions">
+                        <button class="btn btn-secondary" onclick="openNotification()">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                                </path>
+                            </svg>
+                            <span class="hidden-mobile">Alerts</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="sub-nav">
+                    <div class="sub-nav-btn active" data-sub="send">Send</div>
+                    <div class="sub-nav-btn" data-sub="receive">Receive</div>
+                    <div class="sub-nav-btn" data-sub="convert">Convert</div>
+                    <div class="sub-nav-btn" data-sub="assets">Assets</div>
+                    <div class="sub-nav-btn" data-sub="market">Market</div>
+                </div>
+                <div class="section-content">
+                    <div class="nav-content active" id="send">
+                        <div class="card">
+                            <h2 class="card-title">Send Assets</h2>
+                            <form class="wallet-form">
+                                <div class="form-group">
+                                    <label class="form-label">Recipient Address</label>
+                                    <input type="text" class="form-input" placeholder="Enter Monad address">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Amount</label>
+                                    <input type="number" class="form-input" placeholder="0.00">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Asset</label>
+                                    <select class="form-select">
+                                        <option>DRALIEN Token</option>
+                                        <option>Meme Coin</option>
+                                        <option>NFT</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="nav-content" id="receive">
+                        <div class="card">
+                            <h2 class="card-title">Receive Assets</h2>
+                            <div class="wallet-form">
+                                <div class="form-group">
+                                    <label class="form-label">Your Monad Address</label>
+                                    <input type="text" class="form-input" value="0x1234...abcd" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">QR Code</label>
+                                    <div class="chart-placeholder">QR Code for Wallet Address</div>
+                                </div>
+                                <button class="btn btn-outline w-100">Copy Address</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-content" id="convert">
+                        <div class="card">
+                            <h2 class="card-title">Convert Assets</h2>
+                            <form class="wallet-form">
+                                <div class="form-group">
+                                    <label class="form-label">From</label>
+                                    <select class="form-select">
+                                        <option>DRALIEN Token</option>
+                                        <option>Meme Coin</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Amount</label>
+                                    <input type="number" class="form-input" placeholder="0.00">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">To</label>
+                                    <select class="form-select">
+                                        <option>Meme Coin</option>
+                                        <option>DRALIEN Token</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Convert</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="nav-content" id="assets">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-title">My Assets</h2>
+                            </div>
+                            <div class="tabs">
+                                <div class="tab active" data-target="tokens">Tokens</div>
+                                <div class="tab" data-target="nfts">NFTs</div>
+                                <div class="tab" data-target="memes">Meme Coins</div>
+                            </div>
+                            <div class="tab-contents">
+                                <div class="tab-content active" id="tokens">
+                                    <div class="table-container">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Token</th>
+                                                    <th>Balance</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="Token">DRALIEN</td>
+                                                    <td data-label="Balance">125,000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="nfts">
+                                    <div class="nft-gallery">
+                                        <div class="nft-item">
+                                            <img src="placeholder-nft1.jpg" alt="NFT 1">
+                                            <div class="nft-item-title">DrAlien NFT #1</div>
+                                        </div>
+                                        <div class="nft-item">
+                                            <img src="placeholder-nft2.jpg" alt="NFT 2">
+                                            <div class="nft-item-title">DrAlien NFT #2</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="memes">
+                                    <div class="table-container">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Meme Coin</th>
+                                                    <th>Balance</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="Meme Coin">Meme1</td>
+                                                    <td data-label="Balance">10,000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-content" id="market">
+                        <div class="card">
+                            <h2 class="card-title">Market</h2>
+                            <div class="tabs">
+                                <div class="tab active" data-target="nft-market">NFTs</div>
+                                <div class="tab" data-target="meme-market">Meme Coins</div>
+                                <div class="tab" data-target="tokens-market">Tokens</div>
+                            </div>
+                            <div class="tab-contents">
+                                <div class="tab-contents">
+                                    <div class="tab-content active" id="nft-market">
+                                        <div class="market-listing">
+                                            <div class="market-card">
+                                                <img src="placeholder-nft1.jpg" alt="NFT 1">
+                                                <div class="market-item-title">DrAlien NFT #1</div>
+                                                <div class="market-item-price">$100</div>
+                                                <div class="market-action-btn">
+                                                    <button class="btn btn-primary w-100">Buy</button>
+                                                    <button class="btn btn-outline w-100">Make Offer</button>
+                                                </div>
+                                            </div>
+                                            <div class="market-card">
+                                                <img src="placeholder-nft2.jpg" alt="NFT 2">
+                                                <div class="market-item-title">DrAlien NFT #2</div>
+                                                <div class="market-item-price">$150</div>
+                                                <div class="market-action-btn">
+                                                    <button class="btn btn-primary w-100">Buy</button>
+                                                    <button class="btn btn-outline w-100">Make Offer</button>
+                                                </div>
+                                            </div>
+                                            <div class="market-card">
+                                                <img src="placeholder-nft3.jpg" alt="NFT 3">
+                                                <div class="market-item-title">DrAlien NFT #3</div>
+                                                <div class="market-item-price">$200</div>
+                                                <div class="market-action-btn">
+                                                    <button class="btn btn-primary w-100">Buy</button>
+                                                    <button class="btn btn-outline w-100">Make Offer</button>
+                                                </div>
+                                            </div>
+                                            <div class="market-card">
+                                                <img src="placeholder-nft4.jpg" alt="NFT 4">
+                                                <div class="market-item-title">DrAlien NFT #4</div>
+                                                <div class="market-item-price">$180</div>
+                                                <div class="market-action-btn">
+                                                    <button class="btn btn-primary w-100">Buy</button>
+                                                    <button class="btn btn-outline w-100">Make Offer</button>
+                                                </div>
+                                            </div>
+                                            <div class="market-card">
+                                                <img src="placeholder-nft5.jpg" alt="NFT 5">
+                                                <div class="market-item-title">DrAlien NFT #5</div>
+                                                <div class="market-item-price">$220</div>
+                                                <div class="market-action-btn">
+                                                    <button class="btn btn-primary w-100">Buy</button>
+                                                    <button class="btn btn-outline w-100">Make Offer</button>
+                                                </div>
+                                            </div>
+                                            <div class="market-card">
+                                                <img src="placeholder-nft6.jpg" alt="NFT 6">
+                                                <div class="market-item-title">DrAlien NFT #6</div>
+                                                <div class="market-item-price">$300</div>
+                                                <div class="market-action-btn">
+                                                    <button class="btn btn-primary w-100">Buy</button>
+                                                    <button class="btn btn-outline w-100">Make Offer</button>
+                                                </div>
+                                            </div>
+                                            <div class="market-card">
+                                                <img src="placeholder-nft7.jpg" alt="NFT 7">
+                                                <div class="market-item-title">DrAlien NFT #7</div>
+                                                <div class="market-item-price">$275</div>
+                                                <div class="market-action-btn">
+                                                    <button class="btn btn-primary w-100">Buy</button>
+                                                    <button class="btn btn-outline w-100">Make Offer</button>
+                                                </div>
+                                            </div>
+                                            <div class="market-card">
+                                                <img src="placeholder-nft8.jpg" alt="NFT 8">
+                                                <div class="market-item-title">DrAlien NFT #8</div>
+                                                <div class="market-item-price">$190</div>
+                                                <div class="market-action-btn">
+                                                    <button class="btn btn-primary w-100">Buy</button>
+                                                    <button class="btn btn-outline w-100">Make Offer</button>
+                                                </div>
+                                            </div>
+                                            <div class="market-card">
+                                                <img src="placeholder-nft9.jpg" alt="NFT 9">
+                                                <div class="market-item-title">DrAlien NFT #9</div>
+                                                <div class="market-item-price">$350</div>
+                                                <div class="market-action-btn">
+                                                    <button class="btn btn-primary w-100">Buy</button>
+                                                    <button class="btn btn-outline w-100">Make Offer</button>
+                                                </div>
+                                            </div>
+                                            <div class="market-card">
+                                                <img src="placeholder-nft10.jpg" alt="NFT 10">
+                                                <div class="market-item-title">DrAlien NFT #10</div>
+                                                <div class="market-item-price">$420</div>
+                                                <div class="market-action-btn">
+                                                    <button class="btn btn-primary w-100">Buy</button>
+                                                    <button class="btn btn-outline w-100">Make Offer</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-content" id="meme-market">
+                                        <div class="market-grid">
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">🪙</div>
+                                                        <div>
+                                                            <h3>Meme Coin 1</h3>
+                                                            <span class="coin-symbol">MEME1</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-success">+5.2%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$0.05</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">🚀</div>
+                                                        <div>
+                                                            <h3>Meme Coin 2</h3>
+                                                            <span class="coin-symbol">MEME2</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-danger">-2.1%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$0.08</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">🐕</div>
+                                                        <div>
+                                                            <h3>Meme Coin 3</h3>
+                                                            <span class="coin-symbol">MEME3</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-success">+12.5%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$0.12</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">🌙</div>
+                                                        <div>
+                                                            <h3>Meme Coin 4</h3>
+                                                            <span class="coin-symbol">MEME4</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-success">+8.7%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$0.06</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">🔥</div>
+                                                        <div>
+                                                            <h3>Meme Coin 5</h3>
+                                                            <span class="coin-symbol">MEME5</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-danger">-4.3%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$0.09</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">🎮</div>
+                                                        <div>
+                                                            <h3>Meme Coin 6</h3>
+                                                            <span class="coin-symbol">MEME6</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-success">+15.8%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$0.15</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">⚡</div>
+                                                        <div>
+                                                            <h3>Meme Coin 7</h3>
+                                                            <span class="coin-symbol">MEME7</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-success">+3.9%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$0.07</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">🎯</div>
+                                                        <div>
+                                                            <h3>Meme Coin 8</h3>
+                                                            <span class="coin-symbol">MEME8</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-danger">-1.5%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$0.11</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">🌟</div>
+                                                        <div>
+                                                            <h3>Meme Coin 9</h3>
+                                                            <span class="coin-symbol">MEME9</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-success">+22.4%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$0.18</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">🎪</div>
+                                                        <div>
+                                                            <h3>Meme Coin 10</h3>
+                                                            <span class="coin-symbol">MEME10</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-success">+6.2%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$0.10</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-content" id="tokens-market">
+                                        <div class="market-grid">
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">💎</div>
+                                                        <div>
+                                                            <h3>Token 1</h3>
+                                                            <span class="coin-symbol">TKN1</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-success">+5.3%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$1.20</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">⚡</div>
+                                                        <div>
+                                                            <h3>Token 2</h3>
+                                                            <span class="coin-symbol">TKN2</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-success">+12.7%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$2.45</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">🏆</div>
+                                                        <div>
+                                                            <h3>Token 3</h3>
+                                                            <span class="coin-symbol">TKN3</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-danger">-3.2%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$3.80</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">🛡️</div>
+                                                        <div>
+                                                            <h3>Token 4</h3>
+                                                            <span class="coin-symbol">TKN4</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-success">+8.9%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$1.95</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">🔮</div>
+                                                        <div>
+                                                            <h3>Token 5</h3>
+                                                            <span class="coin-symbol">TKN5</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-success">+18.5%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$5.60</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">🎨</div>
+                                                        <div>
+                                                            <h3>Token 6</h3>
+                                                            <span class="coin-symbol">TKN6</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-danger">-5.7%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$2.10</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">🌐</div>
+                                                        <div>
+                                                            <h3>Token 7</h3>
+                                                            <span class="coin-symbol">TKN7</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-success">+14.2%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$4.30</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">🔱</div>
+                                                        <div>
+                                                            <h3>Token 8</h3>
+                                                            <span class="coin-symbol">TKN8</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-success">+7.1%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$3.25</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">🎭</div>
+                                                        <div>
+                                                            <h3>Token 9</h3>
+                                                            <span class="coin-symbol">TKN9</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-danger">-2.8%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$1.75</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="market-card">
+                                                <div class="card-header">
+                                                    <div class="coin-info">
+                                                        <div class="coin-icon">👑</div>
+                                                        <div>
+                                                            <h3>Token 10</h3>
+                                                            <span class="coin-symbol">TKN10</span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="price-badge text-success">+25.6%</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="price-info">
+                                                        <span class="price-label">Current Price</span>
+                                                        <span class="price-value">$6.90</span>
+                                                    </div>
+                                                    <div class="market-action-btn">
+                                                        <button class="btn btn-primary">Buy Now</button>
+                                                        <button class="btn btn-outline">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <!-- Opportunities Section -->
+            <section class="section" id="opportunities">
+                <div class="section-header">
+                    <h1>Equity Opportunities</h1>
+                    <div class="header-actions">
+                        <button class="btn btn-secondary" onclick="openNotification()">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                                </path>
+                            </svg>
+                            <span class="hidden-mobile">Alerts</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="grid grid-2">
+                        <div class="equity-card">
+                            <div class="equity-header">
+                                <div>
+                                    <div class="equity-title">AI-Powered Analytics</div>
+                                    <span class="equity-category">Technology</span>
+                                </div>
+                                <span class="badge badge-review">Under Review</span>
+                            </div>
+                            <div class="equity-metrics">
+                                <div class="equity-metric">
+                                    <div class="equity-metric-label">Asking</div>
+                                    <div class="equity-metric-value">$250K</div>
+                                </div>
+                                <div class="equity-metric">
+                                    <div class="equity-metric-label">Equity</div>
+                                    <div class="equity-metric-value">8%</div>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline w-100" onclick="openModal('opportunityModal')">View
+                                Details</button>
+                        </div>
+                        <div class="equity-card">
+                            <div class="equity-header">
+                                <div>
+                                    <div class="equity-title">GreenEnergy Startup</div>
+                                    <span class="equity-category">Sustainability</span>
+                                </div>
+                                <span class="badge badge-review">Under Review</span>
+                            </div>
+                            <div class="equity-metrics">
+                                <div class="equity-metric">
+                                    <div class="equity-metric-label">Asking</div>
+                                    <div class="equity-metric-value">$180K</div>
+                                </div>
+                                <div class="equity-metric">
+                                    <div class="equity-metric-label">Equity</div>
+                                    <div class="equity-metric-value">6%</div>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline w-100" onclick="openModal('opportunityModal')">View
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Voting Section -->
+            <section class="section" id="voting">
+                <div class="section-header">
+                    <h1>Governance Voting</h1>
+                    <div class="header-actions">
+                        <button class="btn btn-secondary" onclick="openNotification()">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                                </path>
+                            </svg>
+                            <span class="hidden-mobile">Alerts</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="grid grid-2">
+                        <div class="vote-card">
+                            <div class="vote-header">
+                                <div>
+                                    <div class="vote-title">Increase Staking APY</div>
+                                    <div class="vote-description">Raise base APY from 18% to 20%</div>
+                                </div>
+                                <span class="badge badge-active">Live</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width:72%"></div>
+                            </div>
+                            <div class="vote-stats">
+                                <span class="text-success">For: 289 (72%)</span>
+                                <span class="text-danger">Against: 112 (28%)</span>
+                            </div>
+                            <div class="vote-meta">
+                                <span>Ends in 5 days</span>
+                                <span>401 votes</span>
+                            </div>
+                            <div class="vote-actions">
+                                <button class="btn-vote btn-vote-for">Vote For</button>
+                                <button class="btn-vote btn-vote-against">Vote Against</button>
+                            </div>
+                        </div>
+                        <div class="vote-card">
+                            <div class="vote-header">
+                                <div>
+                                    <div class="vote-title">TechVenture Labs Acquisition</div>
+                                    <div class="vote-description">Purchase 5% equity for $125K</div>
+                                </div>
+                                <span class="badge badge-active">Live</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width:78%"></div>
+                            </div>
+                            <div class="vote-stats">
+                                <span class="text-success">For: 156 (78%)</span>
+                                <span class="text-danger">Against: 45 (22%)</span>
+                            </div>
+                            <div class="vote-meta">
+                                <span>Ends in 3 days</span>
+                                <span>201 votes</span>
+                            </div>
+                            <div class="vote-actions">
+                                <button class="btn-vote btn-vote-for">Vote For</button>
+                                <button class="btn-vote btn-vote-against">Vote Against</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Proposals Section -->
+            <section class="section" id="proposals">
+                <div class="section-header">
+                    <h1>DAO Proposals</h1>
+                    <div class="header-actions">
+                        <button class="btn btn-secondary" onclick="openNotification()">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                                </path>
+                            </svg>
+                            <span class="hidden-mobile">Alerts</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="proposal-grid">
+                        <div class="proposal-card">
+                            <div class="proposal-header">
+                                <div class="proposal-title">Increase APY to 20%</div>
+                                <span class="badge badge-active">Voting</span>
+                            </div>
+                            <div class="proposal-meta">
+                                ID: #42 · Author: 0xAbC…123 · Votes: 401 · Ends: 5 days
+                            </div>
+                            <div class="proposal-description">
+                                Raise base APY from 18% to 20% to improve passive income for stakers.
+                            </div>
+                            <div class="proposal-actions">
+                                <button class="btn btn-primary">Vote</button>
+                                <button class="btn btn-outline">Details</button>
+                            </div>
+                        </div>
+                        <div class="proposal-card">
+                            <div class="proposal-header">
+                                <div class="proposal-title">TechVenture Labs</div>
+                                <span class="badge badge-active">Voting</span>
+                            </div>
+                            <div class="proposal-meta">
+                                ID: #41 · Author: 0xDeF…456 · Votes: 201 · Ends: 3 days
+                            </div>
+                            <div class="proposal-description">
+                                Acquire 5% equity in TechVenture Labs for $125K investment.
+                            </div>
+                            <div class="proposal-actions">
+                                <button class="btn btn-primary">Vote</button>
+                                <button class="btn btn-outline">Details</button>
+                            </div>
+                        </div>
+                        <div class="proposal-card">
+                            <div class="proposal-header">
+                                <div class="proposal-title">Quarterly Report</div>
+                                <span class="badge badge-completed">Executed</span>
+                            </div>
+                            <div class="proposal-meta">
+                                ID: #40 · Author: 0xGhi…789 · Votes: 523 · Ended
+                            </div>
+                            <div class="proposal-description">
+                                Approve the quarterly financial report and distribution plan.
+                            </div>
+                            <div class="proposal-actions">
+                                <button class="btn btn-outline">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Analytics Section -->
+            <section class="section" id="analytics">
+                <div class="section-header">
+                    <h1>Analytics Dashboard</h1>
+                    <div class="header-actions">
+                        <button class="btn btn-secondary" onclick="openNotification()">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                                </path>
+                            </svg>
+                            <span class="hidden-mobile">Alerts</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="grid grid-2">
+                        <div class="card">
+                            <div class="chart-placeholder">
+                                <p>Staking growth chart (Chart.js)</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="chart-placeholder">
+                                <p>Revenue distribution chart</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Notification Section -->
+            <div class="notification-section" id="notificationSection">
+                <div class="notification-header">
+                    <h2>Notifications</h2>
+                    <button class="close-btn" onclick="closeNotification()">×</button>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-item">
+                        New vote started: Increase APY
+                    </div>
+                    <div class="notification-item">
+                        Revenue share distributed: $100
+                    </div>
+                    <div class="notification-item">
+                        Your staking rewards are ready to claim
+                    </div>
+                    <div class="notification-item">
+                        New opportunity available: AI-Powered Analytics
+                    </div>
+                    <div class="notification-item">
+                        Proposal #41 has ended
+                    </div>
+                    <!-- More notifications -->
+                </div>
+            </div>
+        </main>
+        <!-- Bottom Navigation (mobile) -->
+        <nav class="bottom-nav">
+            <div class="bottom-nav-items">
+                <div class="bottom-nav-item active" data-page="dashboard">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                        </path>
+                    </svg>
+                    <span>Dashboard</span>
+                </div>
+                <div class="bottom-nav-item" data-page="staking">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                        </path>
+                    </svg>
+                    <span>Staking</span>
+                </div>
+                <div class="bottom-nav-item" data-page="wallet">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                        </path>
+                    </svg>
+                    <span>Wallet</span>
+                </div>
+                <div class="bottom-nav-item" data-page="voting">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4">
+                        </path>
+                    </svg>
+                    <span>Voting</span>
+                </div>
+                <div class="bottom-nav-item" data-page="proposals">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                        </path>
+                    </svg>
+                    <span>Proposals</span>
+                </div>
+            </div>
+        </nav>
+        <!-- FAB -->
+        <div class="fab" onclick="openModal('stakeModal')">+</div>
+        <!-- Modals -->
+        <!-- Stake Modal -->
+        <div class="modal-overlay" id="stakeModal">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2 class="modal-title">Stake Asset</h2>
+                    <button class="close-btn" onclick="closeModal('stakeModal')">×</button>
+                </div>
+                <form onsubmit="event.preventDefault(); alert('Staked!'); closeModal('stakeModal');">
+                    <div class="form-group">
+                        <label class="form-label">Asset Type</label>
+                        <div class="stake-toggle">
+                            <button type="button" class="stake-toggle-btn active" data-type="token">DRALIEN</button>
+                            <button type="button" class="stake-toggle-btn" data-type="nft">NFT</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Amount / NFT ID</label>
+                        <input type="text" class="form-input" placeholder="e.g. 10000 or #0042" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Stake Now</button>
+                </form>
+            </div>
+        </div>
+        <!-- Opportunity Detail Modal -->
+        <div class="modal-overlay" id="opportunityModal">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2 class="modal-title">Opportunity Details</h2>
+                    <button class="close-btn" onclick="closeModal('opportunityModal')">×</button>
+                </div>
+                <div class="form-group">
+                    <p><strong>Company:</strong> AI-Powered Analytics</p>
+                    <p><strong>Sector:</strong> Technology</p>
+                    <p><strong>Asking:</strong> $250K for 8% equity</p>
+                    <p class="form-hint">Review the pitch deck and vote when the proposal goes live.</p>
+                </div>
+                <button class="btn btn-outline w-100" onclick="closeModal('opportunityModal')">Close</button>
+            </div>
+        </div>
+        <!-- Proposal Submit Modal -->
+        <div class="modal-overlay" id="proposalModal">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2 class="modal-title">Submit New Proposal</h2>
+                    <button class="close-btn" onclick="closeModal('proposalModal')">×</button>
+                </div>
+                <form onsubmit="event.preventDefault(); alert('Proposal submitted!'); closeModal('proposalModal');">
+                    <div class="form-group">
+                        <label class="form-label">Title</label>
+                        <input type="text" class="form-input" placeholder="e.g. Acquire 5% of TechVenture Labs"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Description</label>
+                        <textarea class="form-textarea"
+                            placeholder="Explain the investment, amount, equity, and expected ROI…" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Attachment (optional)</label>
+                        <input type="file" class="form-input">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Submit Proposal</button>
+                </form>
+            </div>
+        </div>
+        <!-- NFT Gallery Modal -->
+        <div class="modal-overlay" id="nftGalleryModal">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2 class="modal-title">NFT Gallery</h2>
+                    <button class="close-btn" onclick="closeModal('nftGalleryModal')">×</button>
+                </div>
+                <div class="nft-gallery">
+                    <div class="nft-item">
+                        <img src="placeholder-nft1.jpg" alt="NFT 1">
+                        <div class="nft-item-title">DrAlien NFT #1</div>
+                    </div>
+                    <div class="nft-item">
+                        <img src="placeholder-nft2.jpg" alt="NFT 2">
+                        <div class="nft-item-title">DrAlien NFT #2</div>
+                    </div>
+                    <!-- More NFT items -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <div class="connected-status" id="connectedStatus">
+    <span class="status-indicator"></span>
+    <span id="connectedAddress"></span>
+  </div>
+
+  <!-- Wallet Modal -->
+  <div class="modal-overlay" id="walletModal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h2 class="modal-title">Connect Wallet</h2>
+        <button class="modal-close" onclick="closeWalletModal()">×</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-description">
+          Choose your preferred wallet to connect to the platform. Make sure you have the wallet extension installed in your browser.
+        </p>
+
+        <div class="wallet-grid">
+          <!-- MetaMask -->
+          <div class="wallet-option" onclick="connectWallet('metamask')" data-wallet="metamask">
+            <div class="wallet-icon">🦊</div>
+            <div class="wallet-name">MetaMask</div>
+            <div class="wallet-status" id="metamask-status">Detected</div>
+            <div class="spinner"></div>
+          </div>
+
+          <!-- Phantom -->
+          <div class="wallet-option" onclick="connectWallet('phantom')" data-wallet="phantom">
+            <div class="wallet-icon">👻</div>
+            <div class="wallet-name">Phantom</div>
+            <div class="wallet-status" id="phantom-status">Not Detected</div>
+            <div class="spinner"></div>
+          </div>
+
+          <!-- Trust Wallet -->
+          <div class="wallet-option" onclick="connectWallet('trust')" data-wallet="trust">
+            <div class="wallet-icon">🛡️</div>
+            <div class="wallet-name">Trust Wallet</div>
+            <div class="wallet-status" id="trust-status">Not Detected</div>
+            <div class="spinner"></div>
+          </div>
+
+          <!-- Coinbase Wallet -->
+          <div class="wallet-option" onclick="connectWallet('coinbase')" data-wallet="coinbase">
+            <div class="wallet-icon">💙</div>
+            <div class="wallet-name">Coinbase</div>
+            <div class="wallet-status" id="coinbase-status">Not Detected</div>
+            <div class="spinner"></div>
+          </div>
+
+          <!-- WalletConnect -->
+          <div class="wallet-option" onclick="connectWallet('walletconnect')" data-wallet="walletconnect">
+            <div class="wallet-icon">🔗</div>
+            <div class="wallet-name">WalletConnect</div>
+            <div class="wallet-status" id="walletconnect-status">Available</div>
+            <div class="spinner"></div>
+          </div>
+
+          <!-- Rainbow -->
+          <div class="wallet-option" onclick="connectWallet('rainbow')" data-wallet="rainbow">
+            <div class="wallet-icon">🌈</div>
+            <div class="wallet-name">Rainbow</div>
+            <div class="wallet-status" id="rainbow-status">Not Detected</div>
+            <div class="spinner"></div>
+          </div>
+        </div>
+
+        <div class="error-message" id="errorMessage"></div>
+
+        <div class="success-message" id="successMessage">
+          <div class="success-icon">✅</div>
+          <div class="success-title">Wallet Connected!</div>
+          <div class="success-address" id="walletAddress"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Connecting Overlay -->
+  <div class="connecting-overlay" id="connectingOverlay">
+    <div class="connecting-popup">
+      <div class="connecting-spinner"></div>
+      <div class="connecting-title">Connecting...</div>
+      <div class="connecting-text">
+        Please approve the connection request in your <span class="connecting-wallet-name" id="connectingWalletName"></span> wallet
+      </div>
+    </div>
+  </div>
+  <script src="dralien-app.js"></script>
+</body>
+</html>
